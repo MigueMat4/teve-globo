@@ -3,6 +3,7 @@ import "@fontsource-variable/inter";
 import "~/styles/index.css";
 import Header from "~/components/header.astro";
 import Splash from "~/components/splash.astro";
+import Footer from "~/components/footer.astro";
 
 const { generator, site } = Astro;
 const description =
@@ -58,5 +59,6 @@ const description =
     <Header />
     <Splash />
     <slot />
+    <Footer />
   </body>
 </html>
