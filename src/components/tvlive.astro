@@ -1,0 +1,34 @@
+---
+import { Icon } from "astro-icon/components";
+import Clappr from '@clappr/player';
+---
+
+<section id="live">
+    <h2 class="text-2xl tg-text font-bold text-center my-4"><Icon name="mdi:television-play" style="color: #1986c9;" class="inline" /> EN VIVO</h2>
+    <div class="flex justify-center mt-0-important">
+        <div id="player" class="min-h-[240px] h-[60vw] min-w-[320px] w-[90vw]"></div>
+    </div>
+</section>
+
+
+<style>
+    .mt-0-important {
+        @apply mt-0;
+        margin-top: 0px !important;
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="module" is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+        const player = new Clappr.Player({
+            source: "https://ssh101.bozztv.com/ssh101/tvgolguatemala/playlist.m3u8",
+            parentId: "#player",
+            mute: true,
+            disableCanAutoPlay: true,
+            autoPlay: true,
+            width: '100%',
+            height: '100%'
+        });
+    });
+</script>

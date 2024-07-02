@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="Teve Globo" id="about_us">
+  <Fragment slot="lead">
+    Medio de comunicación <span class="tg-color">en línea</span>, creado para el 
+    <span class="tg-color">entretenimiento</span> y 
+    <span class="tg-color">diversión</span> de nuestro auditorio.
+  </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <a
+      href="#live"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:television-play" class="size-8" />
+      <span>Ver en vivo</span>
+    </a>
+    <a
+      href="https://github.com/MigueMat4/teve-globo"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    >
+      <Icon name="mdi:github" class="size-8" />
+      <span>Estrella en GitHub</span>
+    </a>
+  </div>
+</ContentSection>
