@@ -6,6 +6,7 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   output: "server",
+  site: "https://teveglobo.live/",
   integrations: [tailwind(), icon()],
   adapter: node({
     mode: "standalone"

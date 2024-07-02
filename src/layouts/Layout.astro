@@ -27,6 +27,16 @@ const description =
     <meta property="og:description" content={description} />
     <meta property="og:url" content={site} />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async is:inline src="https://www.googletagmanager.com/gtag/js?id=UA-174136651-1"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-174136651-1');
+    </script>
+
     <!-- initialize theme -->
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
