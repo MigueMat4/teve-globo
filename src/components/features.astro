@@ -1,0 +1,46 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Origen",
+    description:
+      "Somos un medio de comunicación en línea orgullosamente quetzalteco.",
+    icon: "mdi:map-marker",
+  },
+  {
+    title: "Inicio de operaciones",
+    description:
+      "Iniciamos en el mes de Agosto 2020 en versión HD para empresas de cable de Guatemala.",
+    icon: "mdi:calendar",
+  },
+  {
+    title: "Multi-plataforma",
+    description:
+      "Puedes encontrarnos en diversas plataformas. Sintonízanos en el canal 18 de aplica.",
+    icon: "mdi:directions-fork",
+  },
+];
+---
+
+<ContentSection title="Historia" id="history">
+  <Fragment slot="lead">
+    <span class="tg-color">Canal</span> de contenido educativo, familiar, deportivo, 
+    cultural, espiritual y <span class="tg-color">noticioso</span>.
+  </Fragment>
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {
+      features.map(({ title, description, icon }) => (
+        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
+          <div class="size-16 rounded-full border-2 border-current p-3">
+            <Icon name={icon} class="size-full" />
+          </div>
+          <p class="text-center font-extrabold text-xl">{title}</p>
+          <p class="text-center text-offset text-sm">{description}</p>
+        </li>
+      ))
+    }
+  </ul>
+</ContentSection>
