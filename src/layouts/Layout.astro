@@ -27,6 +27,16 @@ const description =
     <meta property="og:description" content={description} />
     <meta property="og:url" content={site} />
 
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-T15DG45QNE"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-T15DG45QNE');
+    </script>
+
     <!-- initialize theme -->
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
